@@ -14,6 +14,10 @@ const App = () => {
     setNeutral(neutral+1)
   }
 
+  let all = good+neutral+bad
+  let average = (good*1 + neutral*0 -1*bad)/all
+  let positive = (good/all)*100 + " %"
+
   return (
     <>
       <h1>get feedback</h1>
@@ -27,6 +31,12 @@ const App = () => {
       neutral {neutral}
       <br></br>
       bad {bad}
+      <br></br>
+      all {all}
+      <br></br>
+      average {average}
+      <br></br>
+      positive {positive}
       </p>
     </>
   )
